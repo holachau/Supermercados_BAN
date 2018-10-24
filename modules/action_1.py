@@ -1,17 +1,27 @@
-def agregarProducto(prod):
-    print("pone muchos datos")
+import sys
+sys.path.insert(0, '../lib')
+from productos import addProducto
+
+def agregarProducto():
     codigo = input("Código del producto: ")
+    
     nombre = input("Nombre del producto: ")
+    
     stock = int(input("Cantidad stock: "))
+    
     precioUnitario = float(input("Precio unitario: "))
+    
     fechaVencimiento = input("Fecha vencimiento: ")
+    
     tipoProducto = input("Tipo de producto: ")
-    prod[codigo] = {
-        "código": codigo,
+    
+    prod= {
+        "codigo": codigo,
         "nombre":nombre,
         "stock": stock,
         "precioUnitario": precioUnitario,
         "fechaVencimiento": fechaVencimiento,
         "tipoProducto": tipoProducto
     }
-    return prod
+    
+    return addProducto(prod) 

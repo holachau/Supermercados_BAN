@@ -31,9 +31,10 @@ def deleteProducto(key):
     try:
         with open('./db/productos.json') as json_file:
             results = json.load(json_file)
-            results.pop("apellidos")
+            nombre = results[key]['nombre']
+            results.pop(key)
             with open('./db/productos.json', 'w') as outfile:  
                 json.dump(results, outfile)            
-                return True
+                return 'El producto '+ nombre + ' ha sido eliminado'
     except Exception:
-        return False
+        return 'Ha ocurrido un error borrando el producto, no existe ese producto'

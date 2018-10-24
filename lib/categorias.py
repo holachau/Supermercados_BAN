@@ -38,3 +38,6 @@ def deleteCategoria(key):
     except Exception:
         return False        
 
+
+print(categoriasFindBySigla("C"))
+

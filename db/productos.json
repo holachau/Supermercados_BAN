@@ -1,25 +1,25 @@
 {
   "man": {
     "codigo": "man",
-    "nombre": "manzana",
-    "stock": 30,
+    "nombre": "Manzana",
+    "stock": 0,
     "precioUnitario": 2,
     "fechaVencimiento": "",
     "tipoProducto": "V"
   },
   "car": {
     "codigo": "car",
-    "nombre": "carne",
-    "stock": 30,
+    "nombre": "Carne",
+    "stock": 0,
     "precioUnitario": 4,
     "fechaVencimiento": "",
     "tipoProducto": "C"
   },
-  "jug": {
-    "codigo": "jug",
-    "nombre": "jugo",
-    "stock": 212,
-    "precioUnitario": 3.15,
+  "coc": {
+    "codigo": "coc",
+    "nombre": "Coca Cola",
+    "stock": 100,
+    "precioUnitario": 6,
     "fechaVencimiento": "",
     "tipoProducto": "B"
   }
