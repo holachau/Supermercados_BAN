@@ -1,0 +1,5 @@
+{
+  "V": { "nombre": "Verduleria", "sigla": "V" },
+  "C": { "nombre": "Carniceria", "sigla": "C" },
+  "B": { "nombre": "Bebida", "sigla": "B" }
+}
