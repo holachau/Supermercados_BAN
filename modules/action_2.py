@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '../lib')
+sys.path.insert(0, './lib')
 from productos import deleteProducto
 
 def eliminarProducto() :

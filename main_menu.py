@@ -1,12 +1,9 @@
 import sys
-sys.path.insert(0, './lib')
 sys.path.insert(0, './modules')
 
 from action_1 import agregarProducto
 from action_2 import eliminarProducto
 from action_3 import listarProductos
-
-
 
 print()
 print('~ ~ ~ B I E N V E N I D O ~ ~ ~')

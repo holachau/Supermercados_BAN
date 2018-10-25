@@ -20,9 +20,9 @@ def addProducto(obj):
         results = read('productos')
         results[obj['codigo']] = obj
         write('productos', results)    
-        return 'La Producto se ha agregado correctamente'
+        return {'status': True, 'msj': 'La Producto se ha agregado correctamente'}
     else:
-        return 'La Producto ya existe'
+        return {'status': False, 'msj': 'La Producto ya existe'}
 
 def updateProducto(obj):
     data = findByCodigo(obj['codigo'])
@@ -30,9 +30,9 @@ def updateProducto(obj):
         results = read('productos')
         results[obj['codigo']] = obj
         write('productos', results)
-        return 'La Producto se ha modificado correctamente'
+        return {'status': True, 'msj': 'La Producto se ha modificado correctamente'}
     else:
-        return 'La Producto no se encuentra'
+        return {'status': False, 'msj': 'La Producto no se encuentra'}
 
 def deleteProducto(key):
     data = findByCodigo(key)
@@ -40,13 +40,13 @@ def deleteProducto(key):
         results = read('productos')
         results.pop(key)
         write('productos', results)
-        return 'La Producto se ha eliminado correctamente'
+        return {'status': True, 'msj': 'La Producto se ha eliminado correctamente'}
     else:
-        return 'La Producto no se encuentra'
+        return {'status': False, 'msj': 'La Producto no se encuentra'}
 
 #TEST
-print(getProductos()) #Obtengo todos los elementos
-print(findByCodigo('V')) #Busco elemento por su codigo
-print(addProducto({'nombre': 'Cocina', 'codigo': 'CO'})) #Agrego un nuevo elemento
-print(updateProducto({'nombre': 'Cochera', 'codigo': 'CO'})) #Modifico un elemento
-print(updateProducto('CO')) #Elimino un elemento
+# print(getProductos()) #Obtengo todos los elementos
+# print(findByCodigo('V')) #Busco elemento por su codigo
+# print(addProducto({'nombre': 'Cocina', 'codigo': 'CO'})) #Agrego un nuevo elemento
+# print(updateProducto({'nombre': 'Cochera', 'codigo': 'CO'})) #Modifico un elemento
+# print(updateProducto('CO')) #Elimino un elemento

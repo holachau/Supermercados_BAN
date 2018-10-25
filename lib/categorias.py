@@ -19,10 +19,10 @@ def addCategoria(obj):
     if (data == None):
         results = read('categorias')
         results[obj['sigla']] = obj
-        write('categorias', results)    
-        return 'La Categoria se ha agregado correctamente'
+        write('categorias', results)
+        return {'status': True, 'msj': 'La Categoria se ha agregado correctamente'}
     else:
-        return 'La Categoria ya existe'
+        return {'status': False, 'msj': 'La Categoria ya existe'}
 
 def updateCategoria(obj):
     data = findBySigla(obj['sigla'])
@@ -30,9 +30,9 @@ def updateCategoria(obj):
         results = read('categorias')
         results[obj['sigla']] = obj
         write('categorias', results)
-        return 'La Categoria se ha modificado correctamente'
+        return {'status': True, 'msj': 'La Categoria se ha modificado correctamente'} 
     else:
-        return 'La Categoria no se encuentra'
+        return {'status': False, 'msj': 'La Categoria no se encuentra'}
 
 def deleteCategoria(key):
     data = findBySigla(key)
@@ -40,13 +40,13 @@ def deleteCategoria(key):
         results = read('categorias')
         results.pop(key)
         write('categorias', results)
-        return 'La Categoria se ha eliminado correctamente'
+        return {'status': True, 'msj': 'La Categoria se ha eliminado correctamente'}
     else:
-        return 'La Categoria no se encuentra'
+        return {'status': False, 'msj': 'La Categoria no se encuentra'}
 
 #TEST
-print(getCategorias()) #Obtengo todos los elementos
-print(findBySigla('V')) #Busco elemento por su sigla
-print(addCategoria({'nombre': 'Cocina', 'sigla': 'CO'})) #Agrego un nuevo elemento
-print(updateCategoria({'nombre': 'Cochera', 'sigla': 'CO'})) #Modifico un elemento
-print(updateCategoria('CO')) #Elimino un elemento
+# print(getCategorias()) #Obtengo todos los elementos
+# print(findBySigla('V')) #Busco elemento por su sigla
+# print(addCategoria({'nombre': 'Cocina', 'sigla': 'CO'})) #Agrego un nuevo elemento
+# print(updateCategoria({'nombre': 'Cochera', 'sigla': 'CO'})) #Modifico un elemento
+# print(updateCategoria('CO')) #Elimino un elemento
