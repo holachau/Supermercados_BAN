@@ -1,40 +1,52 @@
+import sys
+sys.path.insert(0, './utils')
 import json
+from rw import read, write
 
 def getProductos():
-    with open('./db/productos.json') as json_file:
-        results = json.load(json_file)
+    results = read('productos')
     return results
 
-def productosFindByCodigo(codigo):
-    with open('./db/productos.json') as json_file:
-        results = json.load(json_file)
-        data = None
-        if results.__contains__(codigo):
-            data = results[codigo]
-        return data
+def findByCodigo(codigo):
+    results = read('productos')
+    data = None
+    if results.__contains__(codigo):
+        data = results[codigo]
+    return data
 
 def addProducto(obj):
-    with open('./db/productos.json') as json_file:
-        results = json.load(json_file)
-        results[obj["codigo"]] = obj
-        with open('./db/productos.json', 'w') as outfile:  
-            json.dump(results, outfile)        
+    data = findByCodigo(obj['codigo'])
+    if (data == None):
+        results = read('productos')
+        results[obj['codigo']] = obj
+        write('productos', results)    
+        return 'La Producto se ha agregado correctamente'
+    else:
+        return 'La Producto ya existe'
 
 def updateProducto(obj):
-    with open('./db/productos.json') as json_file:
-        results = json.load(json_file)
-        results[obj["codigo"]] = obj
-        with open('./db/productos.json', 'w') as outfile:  
-            json.dump(results, outfile)  
+    data = findByCodigo(obj['codigo'])
+    if (data != None):
+        results = read('productos')
+        results[obj['codigo']] = obj
+        write('productos', results)
+        return 'La Producto se ha modificado correctamente'
+    else:
+        return 'La Producto no se encuentra'
 
 def deleteProducto(key):
-    try:
-        with open('./db/productos.json') as json_file:
-            results = json.load(json_file)
-            nombre = results[key]['nombre']
-            results.pop(key)
-            with open('./db/productos.json', 'w') as outfile:  
-                json.dump(results, outfile)            
-                return 'El producto '+ nombre + ' ha sido eliminado'
-    except Exception:
-        return 'Ha ocurrido un error borrando el producto, no existe ese producto'
+    data = findByCodigo(key)
+    if (data != None):
+        results = read('productos')
+        results.pop(key)
+        write('productos', results)
+        return 'La Producto se ha eliminado correctamente'
+    else:
+        return 'La Producto no se encuentra'
+
+#TEST
+print(getProductos()) #Obtengo todos los elementos
+print(findByCodigo('V')) #Busco elemento por su codigo
+print(addProducto({'nombre': 'Cocina', 'codigo': 'CO'})) #Agrego un nuevo elemento
+print(updateProducto({'nombre': 'Cochera', 'codigo': 'CO'})) #Modifico un elemento
+print(updateProducto('CO')) #Elimino un elemento

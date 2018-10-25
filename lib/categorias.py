@@ -1,43 +1,52 @@
+import sys
+sys.path.insert(0, './utils')
 import json
+from rw import read, write
 
 def getCategorias():
-    with open('./db/categorias.json') as json_file:
-        results = json.load(json_file)
+    results = read('categorias')
     return results
 
-def categoriasFindBySigla(sigla):
-    with open('./db/categorias.json') as json_file:
-        results = json.load(json_file)
-        data = None
-        if results.__contains__(sigla):
-            data = results[sigla]
-        return data
+def findBySigla(sigla):
+    results = read('categorias')
+    data = None
+    if results.__contains__(sigla):
+        data = results[sigla]
+    return data
 
 def addCategoria(obj):
-    with open('./db/categorias.json') as json_file:
-        results = json.load(json_file)
-        results[obj["sigla"]] = obj
-        with open('./db/categorias.json', 'w') as outfile:  
-            json.dump(results, outfile)            
+    data = findBySigla(obj['sigla'])
+    if (data == None):
+        results = read('categorias')
+        results[obj['sigla']] = obj
+        write('categorias', results)    
+        return 'La Categoria se ha agregado correctamente'
+    else:
+        return 'La Categoria ya existe'
 
 def updateCategoria(obj):
-    with open('./db/categorias.json') as json_file:
-        results = json.load(json_file)
-        results[obj["sigla"]] = obj
-        with open('./db/categorias.json', 'w') as outfile:  
-            json.dump(results, outfile)
-        
+    data = findBySigla(obj['sigla'])
+    if (data != None):
+        results = read('categorias')
+        results[obj['sigla']] = obj
+        write('categorias', results)
+        return 'La Categoria se ha modificado correctamente'
+    else:
+        return 'La Categoria no se encuentra'
+
 def deleteCategoria(key):
-    try:
-        with open('./db/categorias.json') as json_file:
-            results = json.load(json_file)
-            results.pop(key)
-            with open('./db/categorias.json', 'w') as outfile:  
-                json.dump(results, outfile)            
-                return True
-    except Exception:
-        return False        
+    data = findBySigla(key)
+    if (data != None):
+        results = read('categorias')
+        results.pop(key)
+        write('categorias', results)
+        return 'La Categoria se ha eliminado correctamente'
+    else:
+        return 'La Categoria no se encuentra'
 
-
-print(categoriasFindBySigla("C"))
-
+#TEST
+print(getCategorias()) #Obtengo todos los elementos
+print(findBySigla('V')) #Busco elemento por su sigla
+print(addCategoria({'nombre': 'Cocina', 'sigla': 'CO'})) #Agrego un nuevo elemento
+print(updateCategoria({'nombre': 'Cochera', 'sigla': 'CO'})) #Modifico un elemento
+print(updateCategoria('CO')) #Elimino un elemento
