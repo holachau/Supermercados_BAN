@@ -1,87 +1,32 @@
-# Supermercado
+# Supermercados BAN
 
-Trabajo práctico 
+## Quienes Somos
 
-## Para empezar:
+Supermercados BAN, se formo a raiz de tres jovenes programadores, decidieron saltar al mundo de los supermercados. Pero la unica condicion de hacerlo era si los sistemas para el supermercado eran programado por ellos mismos. No solo para ahorrar costos sino para desafiar sus conocimientos de programacion. Asi lo hicieron y hoy en dia esta cadena de supermercados es una de las reconocidas nacionalmente y proximamente haran el salto a paises vecinos como Chile y Paraguay.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
+### Funcionalidades del supermercado
 
 ```
-Give examples
+• Agregar un nuevo producto.
+• Eliminar un producto dado su código.
+• Listar todos los productos de una forma prolija.
+• Actualizar el stock cuando se vende un producto.
+• Actualizar el precio unitario de un producto determinado en un cierto procentaje.
+• Determinar la existencia de un producto para poder vender la cantidad solicitada.
+• Reponer un producto cuando el stock está por debajo de un mínimo requerido.
+• Pedir los datos de un cliente para hacer envío a domicilio.
+• Determinar cuál es el artículo más vendido.
+• Eliminar del supermercado (guardarlos en un otro diccionario) los artículos que estén
+vencidos.
+• Simular la venta a un cliente y emitir el ticket de venta.
+• Agregar información adicional al producto para saber si un determinado producto tiene o no
+descuento.
+• Si el producto vence en una semana hacer un 10% de descuento.
+• Determinar el producto más vendido dependiendo del tipo de producto.
 ```
 
-### Installing
+# Fundadores
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+- **Nicolas Benacar | Chief Executive Officer (CEO)**
+- **Agustin Ramos | Chief Technology Officer (CTO)**
+- **Benjamin Nelson | Chief Operating Officer (COO)**
