@@ -37,7 +37,7 @@ while True:
     print('// (14) Conseguir el producto mas vendido de cada categoria              //')
     print('///////////////////////////////////////////////////////////////////////////')
 
-    print()
+    print('---------------')
 
     action = input("Ingrese numero de operacion que desea realizar: ")
     
