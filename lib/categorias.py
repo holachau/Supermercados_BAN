@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, './utils')
+sys.path.append('./utils')
 import json
 from rw import read, write
 
@@ -30,7 +30,7 @@ def updateCategoria(obj):
         results = read('categorias')
         results[obj['sigla']] = obj
         write('categorias', results)
-        return {'status': True, 'msj': 'La Categoria se ha modificado correctamente'} 
+        return {'status': True, 'msj': 'La Categoria se ha modificado correctamente'}
     else:
         return {'status': False, 'msj': 'La Categoria no se encuentra'}
 
@@ -47,6 +47,6 @@ def deleteCategoria(key):
 #TEST
 # print(getCategorias()) #Obtengo todos los elementos
 # print(findBySigla('V')) #Busco elemento por su sigla
-# print(addCategoria({'nombre': 'Cocina', 'sigla': 'CO'})) #Agrego un nuevo elemento
+# print(addCategoria({'nombre': 'Cocina', 'sigla': 'TE'})) #Agrego un nuevo elemento
 # print(updateCategoria({'nombre': 'Cochera', 'sigla': 'CO'})) #Modifico un elemento
 # print(updateCategoria('CO')) #Elimino un elemento

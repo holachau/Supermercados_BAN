@@ -1,0 +1,8 @@
+{
+  "codigo": "string",
+  "nombre": "string",
+  "stock": "int",
+  "precioUnitario": "float",
+  "fechaVencimiento": "date",
+  "categoria": "object"
+}

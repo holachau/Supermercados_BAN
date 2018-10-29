@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, './modules')
+sys.path.append('./modules')
 
 from action_1 import agregarProducto
 from action_2 import eliminarProducto
