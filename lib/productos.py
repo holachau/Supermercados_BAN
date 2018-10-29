@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, './utils')
+sys.path.append('./utils')
 import json
 from rw import read, write
 

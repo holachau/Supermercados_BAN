@@ -5,7 +5,7 @@
     "stock": 0,
     "precioUnitario": 2,
     "fechaVencimiento": "",
-    "tipoProducto": "V"
+    "categoria": "V"
   },
   "car": {
     "codigo": "car",
@@ -13,7 +13,7 @@
     "stock": 0,
     "precioUnitario": 4,
     "fechaVencimiento": "",
-    "tipoProducto": "C"
+    "categoria": "C"
   },
   "coc": {
     "codigo": "coc",
@@ -21,6 +21,6 @@
     "stock": 100,
     "precioUnitario": 6,
     "fechaVencimiento": "",
-    "tipoProducto": "B"
+    "categoria": "B"
   }
 }
