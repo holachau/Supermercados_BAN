@@ -6,8 +6,11 @@ from productos import findByCodigo, updateProducto
 def envio():
     prod = input("¿Qué producto desea? ")
     verif_compra = findByCodigo(prod)
+    while verif_compra == None:
+        prod = input("¿Qué producto desea? ")
+        verif_compra = findByCodigo(prod)
     cant = int(input("¿Cuántos va a llevar? "))
-    if verif_compra["stock"] > cant:
+    if verif_compra["stock"] < cant:
         print("Error, no hay tantos")
     else:
         precio_tot = cant * verif_compra["precioUnitario"]
