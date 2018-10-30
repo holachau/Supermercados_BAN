@@ -12,8 +12,8 @@ def newStock():
         m = int(input("¿Cuántos se vendieron? "))
         
         if m > analizar_stock["stock"]:
-            return "No hay tantos"
+            return "No hay tantos."
         else:
             analizar_stock["stock"] -= m
-            updateProducto(analizar_stock)
-            return "Lista actualizada."
+            result = updateProducto(analizar_stock)
+            return result["msg"]
