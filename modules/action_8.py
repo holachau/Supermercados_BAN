@@ -7,11 +7,11 @@ def envio():
     prod = input("Ingresar código del producto: ")
     verif_compra = findByCodigo(prod)
     if verif_compra == None:
-        print("El producto no existe")
+        return "El producto no existe"
     else:
         cant = int(input("¿Cuántos va a llevar? "))
         if verif_compra["stock"] < cant:
-            print("Error, no hay tantos")
+            return "Error, no hay tantos"
         else:
             precio_tot = cant * verif_compra["precioUnitario"]
             print("El precio total es: ", precio_tot)
@@ -23,3 +23,4 @@ def envio():
                 ubicacion = input("Domicilio: ")
                 tel = input("Teléfono: ")
                 nombre = input("Nombre: ")
+                return "Fantástico. El pedido se está enviando"
