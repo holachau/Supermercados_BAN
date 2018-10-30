@@ -3,7 +3,7 @@ sys.path.append('./utils')
 import json
 from rw import read, write
 from validation import validateSchema
-from date import newDate
+from date import newDate, formatDate
 
 def getProductos():
     results = read('productos')
@@ -22,8 +22,7 @@ def addProducto(obj):
         data = findByCodigo(obj['codigo'])
         if (data == None):
             results = read('productos')
-            results[obj['codigo']] = obj
-            results[obj['categoria']] = obj["categoria"]["sigla"]            
+            results[obj['codigo']] = afterSave(obj)
             write('productos', results)
             return {'status': True, 'msj': 'La Producto se ha agregado correctamente'}
         else:
@@ -37,8 +36,7 @@ def updateProducto(obj):
         data = findByCodigo(obj['codigo'])
         if (data != None):
             results = read('productos')
-            results[obj['codigo']] = obj
-            results[obj['categoria']] = obj["categoria"]["sigla"]
+            results[obj['codigo']] = afterSave(obj)
             write('productos', results)
             return {'status': True, 'msj': 'La Producto se ha modificado correctamente'}
         else:
@@ -56,6 +54,12 @@ def deleteProducto(key):
         return {'status': True, 'msj': 'La Producto se ha eliminado correctamente'}
     else:
         return {'status': False, 'msj': 'La Producto no se encuentra'}
+
+def afterSave(obj):
+    obj["fechaVencimiento"] = formatDate(obj["fechaVencimiento"])
+    obj["categoria"] = obj["categoria"]["sigla"]
+    return obj
+
 
 #TEST
 # print(getProductos()) #Obtengo todos los elementos
