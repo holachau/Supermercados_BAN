@@ -23,5 +23,3 @@ def envio():
                 ubicacion = input("Domicilio: ")
                 tel = input("Teléfono: ")
                 nombre = input("Nombre: ")
-
-#nico puto
