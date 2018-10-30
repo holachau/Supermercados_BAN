@@ -23,13 +23,13 @@ def addProducto(obj):
         if (data == None):
             results = read('productos')
             results[obj['codigo']] = obj
-            #write('productos', results)
+            results[obj['categoria']] = obj["categoria"]["sigla"]            
+            write('productos', results)
             return {'status': True, 'msj': 'La Producto se ha agregado correctamente'}
         else:
             return {'status': False, 'msj': 'La Producto ya existe'}
     else:
         return {'status': False, 'msj': 'Los datos ingresados son incorrentos'}
-
 
 def updateProducto(obj):
     valid = validateSchema(obj, 'producto')
@@ -60,15 +60,15 @@ def deleteProducto(key):
 #TEST
 # print(getProductos()) #Obtengo todos los elementos
 # print(findByCodigo('V')) #Busco elemento por su codigo
-print(addProducto(
-{
-  "codigo": "string",
-  "nombre": "string",
-  "stock": 2,
-  "precioUnitario": 2.3,
-  "fechaVencimiento": newDate('01-01-2008'),
-  "categoria": {"sigla": "V"}
-}    
-)) #Agrego un nuevo elemento
+# print(addProducto(
+# {
+#   "codigo": "string",
+#   "nombre": "string",
+#   "stock": 2,
+#   "precioUnitario": 2.3,
+#   "fechaVencimiento": newDate('01-01-2008'),
+#   "categoria": {"sigla": "V"}
+# }    
+# )) #Agrego un nuevo elemento
 # print(updateProducto({'nombre': 'Cochera', 'codigo': 'CO'})) #Modifico un elemento
 # print(updateProducto('CO')) #Elimino un elemento

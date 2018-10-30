@@ -15,24 +15,32 @@ def findBySigla(sigla):
     return data
 
 def addCategoria(obj):
-    data = findBySigla(obj['sigla'])
-    if (data == None):
-        results = read('categorias')
-        results[obj['sigla']] = obj
-        write('categorias', results)
-        return {'status': True, 'msj': 'La Categoria se ha agregado correctamente'}
+    valid = validateSchema(obj, 'categoria')
+    if (valid):
+        data = findBySigla(obj['sigla'])
+        if (data == None):
+            results = read('categorias')
+            results[obj['sigla']] = obj
+            write('categorias', results)
+            return {'status': True, 'msj': 'La Categoria se ha agregado correctamente'}
+        else:
+            return {'status': False, 'msj': 'La Categoria ya existe'}
     else:
-        return {'status': False, 'msj': 'La Categoria ya existe'}
+        return {'status': False, 'msj': 'Los datos ingresados son incorrentos'}    
 
 def updateCategoria(obj):
-    data = findBySigla(obj['sigla'])
-    if (data != None):
-        results = read('categorias')
-        results[obj['sigla']] = obj
-        write('categorias', results)
-        return {'status': True, 'msj': 'La Categoria se ha modificado correctamente'}
+    valid = validateSchema(obj, 'categoria')
+    if (valid):
+        data = findBySigla(obj['sigla'])
+        if (data != None):
+            results = read('categorias')
+            results[obj['sigla']] = obj
+            write('categorias', results)
+            return {'status': True, 'msj': 'La Categoria se ha modificado correctamente'}
+        else:
+            return {'status': False, 'msj': 'La Categoria no se encuentra'}
     else:
-        return {'status': False, 'msj': 'La Categoria no se encuentra'}
+        return {'status': False, 'msj': 'Los datos ingresados son incorrentos'}        
 
 def deleteCategoria(key):
     data = findBySigla(key)
