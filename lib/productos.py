@@ -7,6 +7,7 @@ from date import newDate, formatDate
 
 def getProductos():
     results = read('productos')
+    results = beforeGet(results)
     return results
 
 def findByCodigo(codigo):
@@ -14,6 +15,7 @@ def findByCodigo(codigo):
     data = None
     if results.__contains__(codigo):
         data = results[codigo]
+        data = beforeFindBy(data)
     return data
 
 def addProducto(obj):
@@ -44,7 +46,6 @@ def updateProducto(obj):
     else:
         return {'status': False, 'msj': 'Los datos ingresados son incorrectos'}
 
-
 def deleteProducto(key):
     data = findByCodigo(key)
     if (data != None):
@@ -60,10 +61,20 @@ def afterSave(obj):
     obj["categoria"] = obj["categoria"]["sigla"]
     return obj
 
+def beforeGet(objs):
+    for o in objs:
+        objs[o] = beforeFindBy(objs[o])
+    return objs
+
+def beforeFindBy(obj):
+    obj["fechaVencimiento"] = newDate(obj["fechaVencimiento"])
+    obj["categoria"] = {"sigla": obj["categoria"]}
+    return obj
+
 
 #TEST
 # print(getProductos()) #Obtengo todos los elementos
-# print(findByCodigo('V')) #Busco elemento por su codigo
+# print(findByCodigo('man')) #Busco elemento por su codigo
 # print(addProducto(
 # {
 #   "codigo": "string",
