@@ -1,4 +1,4 @@
 {
-  "sigla": "string",
-  "nombre": "string"
+  "sigla": "str",
+  "nombre": "str"
 }

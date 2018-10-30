@@ -11,3 +11,9 @@ def write (file, data):
         json.dump(data, outfile, indent = 2)
 
     return None
+
+def schema(file):
+    with open('./schemas/'+ file +'.json') as json_file:
+        results = json.load(json_file)
+
+    return results    
