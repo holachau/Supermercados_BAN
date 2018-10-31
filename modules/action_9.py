@@ -12,7 +12,7 @@ def masvendido():
     mayor = 0
     cod = ""
     for i in listavendidos:
-        if mayor < i[1]:
+        if mayor <= i[1]:
             mayor = i[1]
             cod = i[0]
     print("El producto más vendido fue", cod, "con", mayor, "productos")
