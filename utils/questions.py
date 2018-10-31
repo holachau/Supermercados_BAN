@@ -1,5 +1,6 @@
 answers = {
     "qYesNo": {
+        "label": 's/n',
         "true": ["s", "S", "y", "Y"],
         "false": ["n", "N"]
     }
@@ -7,12 +8,9 @@ answers = {
 
 def qYesNo (label):
     ans = None
-    answersYesNo = answers["qYesNo"]["true"]
+    answersYesNo = answers["qYesNo"]["true"].copy()
     answersYesNo.extend(answers["qYesNo"]["false"])
     while ans not in answersYesNo:
-        ans = input("¿" + label + " (s/n)? ")
-
-    print(answers["qYesNo"]["true"])
-    return True if ans in answers["qYesNo"]["true"] else False
-
-print(qYesNo("Desea continuar"))
+        ans = input("¿" + label + " (" + answers["qYesNo"]["label"] + ")? ")
+        
+    return (True if ans in answers["qYesNo"]["true"] else False)
