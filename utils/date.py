@@ -55,6 +55,9 @@ def fieldDateTime(label):
             print("Error de formato...")
     return fecha
 
+def now():
+    return datetime.now()
+
 #TEST
 #DATE
 # fecha = newDate('01-01-2008')

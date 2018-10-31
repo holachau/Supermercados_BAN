@@ -2,25 +2,34 @@
   "man": {
     "codigo": "man",
     "nombre": "Manzana",
-    "stock": 0,
-    "precioUnitario": 2,
-    "fechaVencimiento": "",
-    "categoria": "V"
+    "stock": 5,
+    "precioUnitario": 2.5,
+    "fechaVencimiento": "01-01-2018",
+    "vendidos": 0,
+    "categoria": {
+      "sigla": "V"
+    }
   },
   "car": {
     "codigo": "car",
     "nombre": "Carne",
     "stock": 0,
-    "precioUnitario": 4,
-    "fechaVencimiento": "",
-    "categoria": "C"
+    "precioUnitario": 4.3,
+    "fechaVencimiento": "01-01-2018",
+    "vendidos": 0,
+    "categoria": {
+      "sigla": "C"
+    }
   },
   "coc": {
     "codigo": "coc",
     "nombre": "Coca Cola",
-    "stock": 100,
-    "precioUnitario": 6,
-    "fechaVencimiento": "",
-    "categoria": "B"
+    "stock": 62,
+    "precioUnitario": 6.0,
+    "fechaVencimiento": "01-01-2018",
+    "vendidos": 38,
+    "categoria": {
+      "sigla": "B"
+    }
   }
 }

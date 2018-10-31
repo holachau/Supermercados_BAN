@@ -1,0 +1,20 @@
+[
+  {
+    "producto": {
+      "codigo": "man"
+    },
+    "nombre": "asd",
+    "telefono": "asd",
+    "direccion": "asd",
+    "fecha": "30-10-2018 22:49:12"
+  },
+  {
+    "producto": {
+      "codigo": "coc"
+    },
+    "nombre": "",
+    "telefono": "",
+    "direccion": "",
+    "fecha": "31-10-2018 08:04:43"
+  }
+]

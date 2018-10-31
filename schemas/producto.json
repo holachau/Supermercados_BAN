@@ -4,5 +4,6 @@
   "stock": "int",
   "precioUnitario": "float",
   "fechaVencimiento": "datetime",
+  "vendidos": "int",
   "categoria": "object"
 }

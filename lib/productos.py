@@ -56,11 +56,6 @@ def deleteProducto(key):
     else:
         return {'status': False, 'msj': 'La Producto no se encuentra'}
 
-def afterSave(obj):
-    obj["fechaVencimiento"] = formatDate(obj["fechaVencimiento"])
-    obj["categoria"] = obj["categoria"]["sigla"]
-    return obj
-
 def beforeGet(objs):
     for o in objs:
         objs[o] = beforeFindBy(objs[o])
@@ -68,9 +63,11 @@ def beforeGet(objs):
 
 def beforeFindBy(obj):
     obj["fechaVencimiento"] = newDate(obj["fechaVencimiento"])
-    obj["categoria"] = {"sigla": obj["categoria"]}
     return obj
 
+def afterSave(obj):
+    obj["fechaVencimiento"] = formatDate(obj["fechaVencimiento"])
+    return obj
 
 #TEST
 # print(getProductos()) #Obtengo todos los elementos
@@ -86,4 +83,4 @@ def beforeFindBy(obj):
 # }    
 # )) #Agrego un nuevo elemento
 # print(updateProducto({'nombre': 'Cochera', 'codigo': 'CO'})) #Modifico un elemento
-# print(updateProducto('CO')) #Elimino un elemento
+# print(deleteProducto('CO')) #Elimino un elemento

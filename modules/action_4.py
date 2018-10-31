@@ -15,5 +15,6 @@ def newStock():
             return "No hay tantos."
         else:
             analizar_stock["stock"] -= m
+            analizar_stock["vendidos"] += m
             result = updateProducto(analizar_stock)
-            return result["msg"]
+            return result["msj"]

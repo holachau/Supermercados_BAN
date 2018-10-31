@@ -18,6 +18,6 @@ def reponer_Stock ():
             reponer = int(input("¿Cuántos quiere agregar?"))
             analizar_stock["stock"] = analizar_stock["stock"] + reponer
             result = updateProducto(analizar_stock)
-            return result["msg"]
+            return result["msj"]
         elif preg == "no" or preg == "No":
             return "Ok."
