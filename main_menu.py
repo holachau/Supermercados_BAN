@@ -4,19 +4,20 @@ sys.path.append('./modules')
 from action_1 import agregarProducto
 from action_2 import eliminarProducto
 from action_3 import listarProductos
+from action_8 import envio
 
 print()
 print('~ ~ ~ B I E N V E N I D O ~ ~ ~')
 print()
 
 def takeDecision(value, operation):
-    operation[value]()
-    return None
+    return operation[value]()
 
 decision = {
     "1": agregarProducto,
     "2": eliminarProducto,
-    "3": listarProductos
+    "3": listarProductos,
+    "8": envio
 }
 
 while True:
@@ -41,7 +42,7 @@ while True:
 
     action = input("Ingrese numero de operacion que desea realizar: ")
     
-    takeDecision(action, decision)
+    print(takeDecision(action, decision))
 
                                                                                 
 

@@ -2,6 +2,7 @@ import sys
 sys.path.append('./utils')
 import json
 from rw import read, write
+from validation import validateSchema
 
 def getCategorias():
     results = read('categorias')
@@ -52,9 +53,14 @@ def deleteCategoria(key):
     else:
         return {'status': False, 'msj': 'La Categoria no se encuentra'}
 
+def getCategoriaOpt(join = False):
+    results = getCategorias()
+    keys = results.keys()
+    return ", ".join(keys) if join else keys
+
 #TEST
 # print(getCategorias()) #Obtengo todos los elementos
 # print(findBySigla('V')) #Busco elemento por su sigla
 # print(addCategoria({'nombre': 'Cocina', 'sigla': 'TE'})) #Agrego un nuevo elemento
 # print(updateCategoria({'nombre': 'Cochera', 'sigla': 'CO'})) #Modifico un elemento
-# print(updateCategoria('CO')) #Elimino un elemento
+# print(deleteCategoria('CO')) #Elimino un elemento

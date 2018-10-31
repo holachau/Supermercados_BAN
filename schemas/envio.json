@@ -1,0 +1,7 @@
+{
+  "producto": "object",
+  "nombre": "str",
+  "telefono": "str",
+  "direccion": "str",
+  "fecha": "datetime"
+}
