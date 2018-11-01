@@ -4,9 +4,7 @@ from productos import deleteProducto
 
 
 def eliminarProducto() :
-    codigoAEliminar = input('Ingrese codigo del producto que desea eliminar: ')
-    print()
+    codigo = input('Ingrese codigo del producto que desea eliminar: ')
+    result = deleteProducto(codigo)
 
-    print(deleteProducto(codigoAEliminar))
-    
-    return None
+    return result["msj"]

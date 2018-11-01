@@ -6,11 +6,13 @@ def listarProductos() :
     productos = getProductos()
 
     print('Producto  <><><>  Stock')
-    print()
+    print('-------------------------')
 
     for k in productos :
         if productos[k]["stock"] > 0:
             print('~~>' + productos[k]["nombre"] + ' ' + str(productos[k]["stock"]))
+    
+    print('-------------------------')
 
-    return None
+    return ''
 

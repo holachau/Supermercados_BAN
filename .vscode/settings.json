@@ -1,6 +1,6 @@
 {
-  "python.pythonPath": "C:\\Users\\aaasa\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe",
-  "python.linting.pylintEnabled": false,
+  "python.pythonPath": "/usr/bin/python3",
+  "python.linting.pylintEnabled": true,
   "editor.formatOnSave": true,
   "python.formatting.autopep8Path": ""
 }
