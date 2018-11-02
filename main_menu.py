@@ -8,6 +8,8 @@ from action_4 import newStock
 from action_7 import reponer_Stock
 from action_8 import envio
 from action_9 import masvendido
+from action_10 import elimProdVencidos
+from action_11 import ticket
 
 print()
 print('~ ~ ~ B I E N V E N I D O ~ ~ ~')
@@ -23,7 +25,9 @@ decision = {
     "4": newStock,
     "7": reponer_Stock,
     "8": envio,
-    "9": masvendido
+    "9": masvendido,
+    "10": elimProdVencidos,
+    "11": ticket
 }
 
 while True:
@@ -45,7 +49,8 @@ while True:
     print('///////////////////////////////////////////////////////////////////////////')
 
     action = input("Ingrese numero de operacion que desea realizar: ")
-    
+    print()
+
     print(takeDecision(action, decision))
 
                                                                                 

@@ -4,7 +4,7 @@
     "nombre": "Manzana",
     "stock": 5,
     "precioUnitario": 2.5,
-    "fechaVencimiento": "01-01-2018",
+    "fechaVencimiento": "01-01-2019",
     "vendidos": 0,
     "categoria": {
       "sigla": "V"
@@ -15,7 +15,7 @@
     "nombre": "Carne",
     "stock": 0,
     "precioUnitario": 4.3,
-    "fechaVencimiento": "01-01-2018",
+    "fechaVencimiento": "01-01-2019",
     "vendidos": 0,
     "categoria": {
       "sigla": "C"
