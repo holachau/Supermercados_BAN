@@ -58,15 +58,14 @@ def fieldDateTime(label):
 def now():
     return datetime.now()
 
-# # #TEST
-# # #DATE
+#TEST
+#DATE
 # fecha = newDate('01-01-2008')
 # print(fecha)
 # print(type(fecha))
 # print(formatDate(fecha))
 # print(type(formatDate(fecha)))
-
-# # #DATE TIME
+#DATE TIME
 # fecha = newDateTime('01-01-2008 22:10:1')
 # print(fecha)
 # print(type(fecha))
