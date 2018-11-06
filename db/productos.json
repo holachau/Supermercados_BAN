@@ -6,6 +6,7 @@
     "precioUnitario": 2.5,
     "fechaVencimiento": "01-01-2018",
     "vendidos": 0,
+    "descuento": 0.0,
     "categoria": {
       "sigla": "V"
     }
@@ -15,8 +16,9 @@
     "nombre": "Carne",
     "stock": 0,
     "precioUnitario": 4.3,
-    "fechaVencimiento": "01-01-2018",
+    "fechaVencimiento": "10-12-2018",
     "vendidos": 0,
+    "descuento": 0.0,
     "categoria": {
       "sigla": "C"
     }
@@ -26,8 +28,9 @@
     "nombre": "Coca Cola",
     "stock": 62,
     "precioUnitario": 6.0,
-    "fechaVencimiento": "01-01-2018",
+    "fechaVencimiento": "08-11-2018",
     "vendidos": 38,
+    "descuento": 0.1,
     "categoria": {
       "sigla": "B"
     }

@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 formato = {
     "date": {
@@ -57,6 +57,9 @@ def fieldDateTime(label):
 
 def now():
     return datetime.now()
+
+def addDays(fecha, days):
+    return fecha + timedelta(days=days)
 
 #TEST
 #DATE
