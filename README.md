@@ -35,6 +35,6 @@ descuento.
 
 # Fundadores
 
-- **Nicolas Benacar | Chief Executive Officer (CEO)**
-- **Agustin Ramos | Chief Technology Officer (CTO)**
-- **Benjamin Nelson | Chief Operating Officer (COO)**
+- **Nicolás Beñacar | Chief Executive Officer (CEO)**
+- **Agustín Ramos | Chief Technology Officer (CTO)**
+- **Benjamín Nelson | Chief Operating Officer (COO)**
