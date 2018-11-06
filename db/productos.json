@@ -1,35 +1,26 @@
 {
-  "lec": {
-    "codigo": "lec",
-    "nombre": "leche",
-    "stock": 20,
-    "precioUnitario": 5.0,
-    "fechaVencimiento": "30-12-2018",
+  "car": {
+    "codigo": "car",
+    "nombre": "Carne",
+    "stock": 0,
+    "precioUnitario": 4.3,
+    "fechaVencimiento": "10-12-2018",
     "vendidos": 0,
+    "descuento": 0.0,
     "categoria": {
-      "sigla": "B"
+      "sigla": "C"
     }
   },
   "coc": {
     "codigo": "coc",
-    "nombre": "coca cola",
-    "stock": 1000,
-    "precioUnitario": 2.5,
-    "fechaVencimiento": "31-12-2020",
-    "vendidos": 0,
+    "nombre": "Coca Cola",
+    "stock": 62,
+    "precioUnitario": 6.0,
+    "fechaVencimiento": "08-11-2018",
+    "vendidos": 38,
+    "descuento": 0.1,
     "categoria": {
       "sigla": "B"
-    }
-  },
-  "car": {
-    "codigo": "car",
-    "nombre": "carne",
-    "stock": 50,
-    "precioUnitario": 5.0,
-    "fechaVencimiento": "31-12-2018",
-    "vendidos": 0,
-    "categoria": {
-      "sigla": "C"
     }
   }
 }

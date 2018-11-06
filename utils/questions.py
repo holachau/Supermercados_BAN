@@ -1,8 +1,8 @@
 answers = {
     "qYesNo": {
         "label": 's/n',
-        "true": ["s", "S", "y", "Y"],
-        "false": ["n", "N"]
+        "true": ["s", "S", "y", "Y", "si", "Si"],
+        "false": ["n", "N", "No", "no"]
     }
 }
 
