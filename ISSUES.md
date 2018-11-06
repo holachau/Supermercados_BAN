@@ -1,0 +1,1 @@
+1 - Error en accion 10 (TypeError: '<' not supported between instances of 'datetime.datetime' and 'bool')

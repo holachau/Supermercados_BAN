@@ -10,6 +10,11 @@ from action_8 import envio
 from action_9 import masvendido
 from action_10 import elimProdVencidos
 from action_11 import ticket
+from action_12 import agregarDesc
+from action_13 import DescVenc
+from action_14 import masvendido_segunclase
+
+
 
 print()
 print('~ ~ ~ B I E N V E N I D O ~ ~ ~')
@@ -27,7 +32,10 @@ decision = {
     "8": envio,
     "9": masvendido,
     "10": elimProdVencidos,
-    "11": ticket
+    "11": ticket,
+    "12": agregarDesc,
+    "13": DescVenc,
+    "14": masvendido_segunclase
 }
 
 while True:
@@ -46,8 +54,9 @@ while True:
     print('// (12) Agregar informacion adicional a un producto                      //')
     print('// (13) Aplicar descuentos a productos que vencen en una semana          //')
     print('// (14) Conseguir el producto mas vendido de cada categoria              //')
+    print('// (15) Crear una nueva categoria                                        //')
     print('///////////////////////////////////////////////////////////////////////////')
-
+    print()
     action = input("Ingrese numero de operacion que desea realizar: ")
     print()
 
