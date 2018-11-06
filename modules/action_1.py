@@ -6,8 +6,8 @@ from categorias import getCategoriaOpt
 from date import fieldDate
 
 def agregarProducto():
-    codigo = input("Código del producto: ")
     nombre = input("Nombre del producto: ")
+    codigo = input("Código del producto: ")
     stock = int(input("Cantidad stock: "))
     precioUnitario = float(input("Precio unitario: "))
     fechaVencimiento = fieldDate("fecha de vencimiento")

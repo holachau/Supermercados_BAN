@@ -1,24 +1,28 @@
+import sys
+sys.path.append('./modules')
+sys.path.append('./lib')
+
 from productos import getProductos, findByCodigo, deleteProducto
-from action_3 import listarProductos
-from date import formatDate, newDate, now
+from date import formatDate, newDate, now, fieldDate
 
 # Eliminar productos vencidos
 
 def elimProdVencidos() :
-    fecha = newDate(str(input('Ingrese la fecha de hoy [dd-mm-aaaa]:  ')))
+    #fecha = newDate(str(input('Ingrese la fecha de hoy [dd-mm-aaaa]:  ')))
+    fecha = now()
     productos = getProductos()
-    
+    productosEliminados = []
     for k in productos:
         if productos[k]['fechaVencimiento'] < fecha :
+            productosEliminados.append(productos[k]["nombre"])
             deleteProducto(productos[k]['codigo'])
-            productosEliminados = productosEliminados + '\n' + productos[k]["nombre"]
     
     print('Se han eliminado')
-    print(productosEliminados)
+    print(', '.join(productosEliminados))
 
     return()
 
 
-
+elimProdVencidos()
     
 

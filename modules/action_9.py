@@ -16,4 +16,3 @@ def masvendido():
             mayor = i[1]
             cod = i[0]
     print("El producto más vendido fue", cod, "con", mayor, "productos")
-masvendido()

@@ -46,8 +46,9 @@ while True:
     print('// (12) Agregar informacion adicional a un producto                      //')
     print('// (13) Aplicar descuentos a productos que vencen en una semana          //')
     print('// (14) Conseguir el producto mas vendido de cada categoria              //')
+    print('// (15) Crear una nueva categoria                                        //')
     print('///////////////////////////////////////////////////////////////////////////')
-
+    print()
     action = input("Ingrese numero de operacion que desea realizar: ")
     print()
 
