@@ -16,7 +16,7 @@ def elimProdVencidos() :
     print('Se han eliminado')
     print(productosEliminados)
 
-    return()
+    return ''
 
 
 

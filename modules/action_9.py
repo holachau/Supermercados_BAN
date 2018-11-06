@@ -4,10 +4,10 @@ from productos import getProductos
 
 #El usuario solicita determinar cuál es el artículo más vendido.
 def masvendido():
-    efe = getProductos()
+    productos = getProductos()
     listavendidos = []
-    for i in efe:
-        listavendidos.append([efe[i]["nombre"], efe[i]["vendidos"]])
+    for i in productos:
+        listavendidos.append([productos[i]["nombre"], productos[i]["vendidos"]])
     
     mayor = 0
     cod = ""
@@ -15,5 +15,5 @@ def masvendido():
         if mayor <= i[1]:
             mayor = i[1]
             cod = i[0]
-    print("El producto más vendido fue", cod, "con", mayor, "productos")
-masvendido()
+            
+    return "El producto más vendido fue", cod, "con", mayor, "productos"
