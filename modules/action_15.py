@@ -4,19 +4,15 @@ sys.path.append('./utils')
 from categorias import addCategoria
 
 # Crear una nueva categoria
-def newCategoria(): 
+def agregarCategoria(): 
     print()
     nombre = str(input('Ingrese el nombre'))
+    nombre.upper()
     sigla = str(input('Ingrese la sigla de la categoria: '))
-
     categoria = {
         "sigla": sigla,
-    "nombre": nombre
+        "nombre": nombre
     }
-
     result = addCategoria(categoria)
-
     print()
-    print(result["msj"])
-
-    return ''
+    return result["msj"]

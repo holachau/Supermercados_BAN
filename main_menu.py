@@ -15,7 +15,7 @@ from action_11 import ticket
 from action_12 import agregarDesc
 from action_13 import DescVenc
 from action_14 import masvendido_segunclase
-from action_15 import newCategoria
+from action_15 import agregarCategoria
 
 
 
@@ -41,7 +41,7 @@ decision = {
     "12": agregarDesc,
     "13": DescVenc,
     "14": masvendido_segunclase,
-    "15": newCategoria
+    "15": agregarCategoria
 }
 
 while True:
