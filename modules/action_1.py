@@ -24,7 +24,10 @@ def agregarProducto():
         "nombre": nombre,
         "stock": stock,
         "precioUnitario": precioUnitario,
+        'ultimoIncremento%': 0.0,
+        'ultimoIncremento#': 0.0,
         "fechaVencimiento": fechaVencimiento,
+        "descuento": 0.0,
         "vendidos": 0,
         "categoria": {"sigla": categoria}
     }

@@ -8,16 +8,16 @@ from questions import qYesNo
 # Simular una venta y emitir un ticket
 def ticket():
     print('Introduzca el codigo del producto a vender (primeras tres letras del nombre)')
-    print('Luego la cantidad de unidades')
+    print('Luego la cantidad de unidades que compro el cliente')
     print('Presione ENTER para emitir el ticket')
 
     exit = False
     productos = []
     precioTotal = 0
     while exit == False:
-        producto = findByCodigo(input('~~>'))
+        producto = findByCodigo(input('Codigo ~~>'))
         if (producto != None):
-            cantidad = int(input('~>'))
+            cantidad = int(input('Cantidad~>'))
             productos.append({ 'prod': producto["nombre"], 'cant' : cantidad, 'precio' : producto["precioUnitario"]})
         r = qYesNo("Desea continuar")
         if r == False:

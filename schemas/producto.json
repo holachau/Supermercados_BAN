@@ -3,6 +3,8 @@
   "nombre": "str",
   "stock": "int",
   "precioUnitario": "float",
+  "ultimoIncremento%": "float",
+  "ultimoIncremento#": "float",
   "fechaVencimiento": "datetime",
   "vendidos": "int",
   "descuento": "float",

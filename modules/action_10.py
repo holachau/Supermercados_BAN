@@ -22,7 +22,5 @@ def elimProdVencidos() :
 
     return ''
 
-
-elimProdVencidos()
     
 
