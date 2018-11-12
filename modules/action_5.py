@@ -1,7 +1,7 @@
 import sys
 sys.path.append('./lib')
 sys.path.append('./utils')
-from productos import findByCodig, updateProducto
+from productos import findByCodigo, updateProducto
 
 # Actualizar el precio unitario de un producto porcentualmente 
 
